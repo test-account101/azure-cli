@@ -33,16 +33,28 @@ parameters:
   - name: --key-version
     type: string
     short-summary: 'Key version for the user-assigned encryption type.'
+examples:
+  - name: Creates a Data Lake Store account.
+    text: az dls account create
+    crafted: true
 """
 
 helps['dls account delete'] = """
 type: command
 short-summary: Delete a Data Lake Store account.
+examples:
+  - name: Delete a Data Lake Store account.
+    text: az dls account delete
+    crafted: true
 """
 
 helps['dls account enable-key-vault'] = """
 type: command
 short-summary: Enable the use of Azure Key Vault for encryption of a Data Lake Store account.
+examples:
+  - name: Enable the use of Azure Key Vault for encryption of a Data Lake Store account.
+    text: az dls account enable-key-vault
+    crafted: true
 """
 
 helps['dls account firewall'] = """
@@ -63,26 +75,46 @@ parameters:
   - name: --firewall-rule-name
     type: string
     short-summary: 'The name of the firewall rule.'
+examples:
+  - name: Creates a firewall rule in a Data Lake Store account.
+    text: az dls account firewall create
+    crafted: true
 """
 
 helps['dls account firewall delete'] = """
 type: command
 short-summary: Deletes a firewall rule in a Data Lake Store account.
+examples:
+  - name: Deletes a firewall rule in a Data Lake Store account.
+    text: az dls account firewall delete
+    crafted: true
 """
 
 helps['dls account firewall list'] = """
 type: command
 short-summary: Lists firewall rules in a Data Lake Store account.
+examples:
+  - name: Lists firewall rules in a Data Lake Store account.
+    text: az dls account firewall list
+    crafted: true
 """
 
 helps['dls account firewall show'] = """
 type: command
 short-summary: Get the details of a firewall rule in a Data Lake Store account.
+examples:
+  - name: Get the details of a firewall rule in a Data Lake Store account.
+    text: az dls account firewall show
+    crafted: true
 """
 
 helps['dls account firewall update'] = """
 type: command
 short-summary: Updates a firewall rule in a Data Lake Store account.
+examples:
+  - name: Updates a firewall rule in a Data Lake Store account.
+    text: az dls account firewall update
+    crafted: true
 """
 
 helps['dls account list'] = """
@@ -109,31 +141,55 @@ parameters:
   - name: --vnet-name
     type: string
     short-summary: 'The name of the virtual network rule.'
+examples:
+  - name: Creates a virtual network rule in a Data Lake Store account.
+    text: az dls account network-rule create
+    crafted: true
 """
 
 helps['dls account network-rule delete'] = """
 type: command
 short-summary: Deletes a virtual network rule in a Data Lake Store account.
+examples:
+  - name: Deletes a virtual network rule in a Data Lake Store account.
+    text: az dls account network-rule delete
+    crafted: true
 """
 
 helps['dls account network-rule list'] = """
 type: command
 short-summary: Lists virtual network rules in a Data Lake Store account.
+examples:
+  - name: Lists virtual network rules in a Data Lake Store account.
+    text: az dls account network-rule list
+    crafted: true
 """
 
 helps['dls account network-rule show'] = """
 type: command
 short-summary: Get the details of a virtual network rule in a Data Lake Store account.
+examples:
+  - name: Get the details of a virtual network rule in a Data Lake Store account.
+    text: az dls account network-rule show
+    crafted: true
 """
 
 helps['dls account network-rule update'] = """
 type: command
 short-summary: Updates a virtual network rule in a Data Lake Store account.
+examples:
+  - name: Updates a virtual network rule in a Data Lake Store account.
+    text: az dls account network-rule update
+    crafted: true
 """
 
 helps['dls account show'] = """
 type: command
 short-summary: Get the details of a Data Lake Store account.
+examples:
+  - name: Get the details of a Data Lake Store account.
+    text: az dls account show
+    crafted: true
 """
 
 helps['dls account trusted-provider'] = """
@@ -144,6 +200,10 @@ short-summary: (PREVIEW) Manage Data Lake Store account trusted identity provide
 helps['dls account update'] = """
 type: command
 short-summary: Updates a Data Lake Store account.
+examples:
+  - name: Updates a Data Lake Store account.
+    text: az dls account update
+    crafted: true
 """
 
 helps['dls fs'] = """
@@ -159,21 +219,46 @@ short-summary: Manage Data Lake Store filesystem access and permissions.
 helps['dls fs access remove-all'] = """
 type: command
 short-summary: Remove the access control list for a file or folder.
+examples:
+  - name: Remove the access control list for a file or folder.
+    text: az dls fs access remove-all
+    crafted: true
 """
 
 helps['dls fs access remove-entry'] = """
 type: command
 short-summary: Remove entries for the access control list of a file or folder.
+examples:
+  - name: Remove entries for the access control list of a file or folder.
+    text: az dls fs access remove-entry
+    crafted: true
 """
 
 helps['dls fs access set'] = """
 type: command
 short-summary: Replace the existing access control list for a file or folder.
+examples:
+  - name: Replace the existing access control list for a file or folder.
+    text: az dls fs access set
+    crafted: true
+  - name: Set the permissions for a file or folder in a Data Lake Store account.
+    text: az dls fs access set-permission
+    crafted: true
+  - name: Set the permissions for a file or folder in a Data Lake Store account. (crafted)
+    text: az dls fs access set-permission --account {account} --path {path} --permission 777
+    crafted: true
 """
 
 helps['dls fs access set-entry'] = """
 type: command
 short-summary: Update the access control list for a file or folder.
+examples:
+  - name: Update the access control list for a file or folder.
+    text: az dls fs access set-entry
+    crafted: true
+  - name: Update the access control list for a file or folder. (crafted)
+    text: az dls fs access set-entry --account {account} --acl-spec user:6360e05d-c381-4275-a932-5535806bb323:-w- --path {path}
+    crafted: true
 """
 
 helps['dls fs access set-owner'] = """
@@ -186,6 +271,10 @@ parameters:
   - name: --group
     type: string
     short-summary: The group Azure Active Directory object ID or user principal name to set as the owning group.
+examples:
+  - name: Set the owner information for a file or folder in a Data Lake Store account.
+    text: az dls fs access set-owner
+    crafted: true
 """
 
 helps['dls fs access set-permission'] = """
@@ -220,6 +309,10 @@ parameters:
   - name: --content
     type: string
     short-summary: 'Content to be appended to the file.'
+examples:
+  - name: Append content to a file in a Data Lake Store account.
+    text: az dls fs append
+    crafted: true
 """
 
 helps['dls fs create'] = """
@@ -285,6 +378,10 @@ parameters:
   - name: --destination-path
     type: string
     short-summary: The destination path in the Data Lake Store account.
+examples:
+  - name: Join files in a Data Lake Store account into one file.
+    text: az dls fs join
+    crafted: true
 """
 
 helps['dls fs list'] = """
@@ -323,16 +420,28 @@ parameters:
   - name: --offset
     type: long
     short-summary: The position in bytes to start the preview from.
+examples:
+  - name: Preview the content of a file in a Data Lake Store account.
+    text: az dls fs preview
+    crafted: true
 """
 
 helps['dls fs remove-expiry'] = """
 type: command
 short-summary: Remove the expiration time for a file.
+examples:
+  - name: Remove the expiration time for a file.
+    text: az dls fs remove-expiry
+    crafted: true
 """
 
 helps['dls fs set-expiry'] = """
 type: command
 short-summary: Set the expiration time for a file.
+examples:
+  - name: Set the expiration time for a file.
+    text: az dls fs set-expiry
+    crafted: true
 """
 
 helps['dls fs show'] = """
